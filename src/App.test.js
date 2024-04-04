@@ -86,7 +86,6 @@ test("renders App component", () => {
   expect(appElement).toBeInTheDocument();
 });
 
-
 test('Fetches provinces data and verifies Province Names Are Rendered', async () => {
   render(<App />);
   await waitFor(() => {
@@ -102,8 +101,6 @@ test('Fetches provinces data and verifies Province Names Are Rendered', async ()
     expect(screen.getByText("Newfoundland and Labrador")).toBeInTheDocument();
   });
 });
-
-
 
 test('Fetches provinces data and validates Rendering and Source URLs of Province Flags', async () => {
   render(<App />);
@@ -152,8 +149,6 @@ test("Ensures capital names are not shown initially in Item component", () => {
   const capitalElement = screen.queryByText(mockData.capital);
   expect(capitalElement).not.toBeInTheDocument();
 });
-
-
 
 test('Toggles capital name on button click', () => {
   const mockData = {
